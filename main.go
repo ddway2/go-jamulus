@@ -1,15 +1,19 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/ddway2/go-jamulus/janulus"
+	"github.com/ddway2/go-jamulus/cli"
+	"github.com/ddway2/go-jamulus/server"
 )
 
 func main() {
-	fmt.Println("Hello World")
+	var conf cli.Config
 
-	app := janulus.App{}
+	s, err := server.NewServer(&conf)
+	if err != nil {
+		server.LogDie("%s", err)
+	}
 
-	app.Run()
+	if err := s.Run(); err != nil {
+		server.LogDie("%s", err)
+	}
 }
