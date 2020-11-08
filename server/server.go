@@ -1,9 +1,6 @@
 package server
 
 import (
-	"fmt"
-	"os"
-
 	"github.com/ddway2/go-jamulus/cli"
 )
 
@@ -14,21 +11,25 @@ func NewServer(conf *cli.Config) (*Server, error) {
 	return s, nil
 }
 
-func LogDie(msg string, v ...interface{}) {
-	fmt.Fprintln(os.Stderr, msg, v)
-	os.Exit(1)
-}
-
-func LogExit(msg string, v ...interface{}) {
-	fmt.Fprintln(os.Stderr, msg, v)
-	os.Exit(0)
-}
-
 // Server function
-func (self *Server) Configure() error {
+func (self *Server) Configure() {
+
+}
+
+func (self *Server) Start() error {
 	return nil
 }
 
-func (self *Server) Run() error {
-	return nil
+func (self *Server) Shutdown() {
+
+}
+
+func (self *Server) AcceptLoop(clr chan struct{}) {
+	// Clean chan connection
+	defer func() {
+		if clr != nil {
+			close(clr)
+		}
+	}()
+
 }
