@@ -1,3 +1,13 @@
+github.com/ddway2/opus v0.0.0-20201109081258-f11f8d23f281 h1:7euv/dM3tIzy5E944t1w5Rod1TkDBzGpFUFtZiCGEuI=
+github.com/ddway2/opus v0.0.0-20201109081258-f11f8d23f281/go.mod h1:LSZCJdN049Hrd3vztpcOxdIgBOzxEwDpDnkbLujvIDs=
+github.com/ddway2/opus v1.0.0 h1:df+VMUDaty5yY35adNR/B+m73rmo0m1ktVFKJ9BSlcE=
+github.com/ddway2/opus v1.0.0/go.mod h1:bdsBHaeHWmol7E7fL9z2OdQypw0+9BqxRfVCTbRXSw0=
+github.com/ddway2/opus v1.0.1 h1:lHTFiU6MFFUlpkxR6PU2lyog6QjL2TdUUJLAgOBtuRI=
+github.com/ddway2/opus v1.0.1/go.mod h1:bdsBHaeHWmol7E7fL9z2OdQypw0+9BqxRfVCTbRXSw0=
+github.com/ddway2/opus v1.0.2 h1:75GlWzsF1iNsWQNHhALuTPa056T9s+oAXWxRx6RgRKU=
+github.com/ddway2/opus v1.0.2/go.mod h1:bdsBHaeHWmol7E7fL9z2OdQypw0+9BqxRfVCTbRXSw0=
+github.com/ddway2/opus v1.0.3 h1:xK7/Cz0LfOpi2bV6cfTynI11whB/lcv9WI7ireRwf4A=
+github.com/ddway2/opus v1.0.3/go.mod h1:bdsBHaeHWmol7E7fL9z2OdQypw0+9BqxRfVCTbRXSw0=
 golang.org/x/sys v0.0.0-20201107080550-4d91cf3a1aaf h1:kt3wY1Lu5MJAnKTfoMR52Cu4gwvna4VTzNOiT8tY73s=
 golang.org/x/sys v0.0.0-20201107080550-4d91cf3a1aaf/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=

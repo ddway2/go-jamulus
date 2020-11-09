@@ -2,18 +2,28 @@ package server
 
 import (
 	"fmt"
+	"sync"
 
 	"github.com/ddway2/go-jamulus/cli"
-	"gopkg.in/hraban/opus.v2"
+	"github.com/ddway2/opus"
 )
 
+// Info contains server informations
+type Info struct {
+}
+
+// Server is the main application
 type Server struct {
+	mu   sync.Mutex
+	done chan bool
+
 	Conf    *cli.Config
 	SSocket *Socket
 
 	OPUSDec *opus.Decoder
 }
 
+// NewServer initialize server from Config
 func NewServer(conf *cli.Config) (*Server, error) {
 	s := &Server{
 		Conf: conf,
@@ -27,29 +37,17 @@ func NewServer(conf *cli.Config) (*Server, error) {
 	return s, nil
 }
 
-// Server function
-func (self *Server) Configure() {
-
-}
-
+// Start server
 func (self *Server) Start() {
 
 }
 
+// Shutdown server if available
 func (self *Server) Shutdown() {
 
 }
 
+// MixEncodeTransmitData preare data from other clients
 func (self *Server) MixEncodeTransmitData( /*Channel count, num client*/ ) {
-
-}
-
-func (self *Server) AcceptLoop(clr chan struct{}) {
-	// Clean chan connection
-	defer func() {
-		if clr != nil {
-			close(clr)
-		}
-	}()
 
 }
