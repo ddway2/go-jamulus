@@ -3,8 +3,6 @@ package server
 import (
 	"net"
 	"time"
-
-	"github.com/ddway2/go-jamulus/protocol"
 )
 
 type Socket struct {
@@ -16,10 +14,17 @@ type Socket struct {
 
 // NewSocket Create new internal socket
 func NewSocket(serv *Server) (*Socket, error) {
-	s := &Socket{
-		server: serv,
+	var s Socket
+	if err := s.Init(serv); err != nil {
+		return nil, err
 	}
-	return s, nil
+	return &s, nil
+}
+
+// Init initialized constructor
+func (s *Socket) Init(serv *Server) error {
+	s.server = serv
+	return nil
 }
 
 // Start begin socket listening
@@ -36,12 +41,12 @@ func (s *Socket) serveUDP(c net.PacketConn) {
 	defer c.Close()
 
 	c.SetReadDeadline(time.Now().Add(time.Second))
-	buf := make([]byte, protocol.MAX_SIZE_BYTES_NETW_BUF)
+	//buf := make([]byte, protocol.MAX_SIZE_BYTES_NETW_BUF)
 
 	for {
-		n, addr, err := c.ReadFrom(buf)
-		if err != nil {
-			continue
-		}
+		// n, addr, err := c.ReadFrom(buf)
+		// if err != nil {
+		// 	continue
+		// }
 	}
 }
